@@ -222,3 +222,7 @@ body {
   padding-left: calc(clamp(460px, 76vh, 1040px) * 0.5083333 + 14px) !important;
   box-sizing: border-box;
 }
+
+[class*="_frame"]:not([data-rightbar-collapsed]) [data-rightbar-col] [class*="webview"] {
+  margin-left: clamp(48px, calc(clamp(460px, 76vh, 1040px) * 0.11), 118px) !important;
+}
