@@ -226,3 +226,14 @@ body {
 [class*="_frame"]:not([data-rightbar-collapsed]) [data-rightbar-col] [class*="webview"] {
   margin-left: clamp(48px, calc(clamp(460px, 76vh, 1040px) * 0.11), 118px) !important;
 }
+
+/* --- the details pane yields the space she stands in ---
+ * With the pane open the input card's right edge sits only ~28px left of it while
+ * the right portrait reaches ~220px into it; inset the pane host (which lays the
+ * content out) and give the embedded browser's page surface its own margin so she
+ * rests a hair over the page instead of burying it.
+ */
+[class*="_frame"]:not([data-rightbar-collapsed]) [data-rightbar-col] [class*="_pane_"] {
+  padding-left: clamp(24px, calc(clamp(460px, 76vh, 1040px) * 0.13), 140px) !important;
+  box-sizing: border-box;
+}
